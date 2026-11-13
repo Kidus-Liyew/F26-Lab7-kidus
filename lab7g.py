@@ -12,3 +12,12 @@
 
 # TO DO 3: Run the script.
 
+import pandas as pd
+movies = pd.read_csv("/workspaces/F26-Lab7-kidus/imdb_top_250.csv")
+# print(movies.head(10))
+# print(movies.tail(10))
+# print(movies.columns)
+# print("Earliest movie:" movies['Year'.min()])
+# print(movies['Genre'].unique())
+list_not_usa_movies = movies[movies["Origin"] != "USA"]
+print(len(list_not_usa_movies))

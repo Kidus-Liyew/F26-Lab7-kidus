@@ -14,3 +14,16 @@
 
 # TO DO 4: Run the script.
 
+import pandas as pd
+
+grades_list = ["<50", "50-59", "60-69", "70-79", "80-89", "90-100"]
+grades = pd.Series(grade_list, index = ["F", "D", "C", "B", "A", "A+"])
+#Printing the whole series
+print(grades)
+#print values for index C and A+
+print(grades.loc[["C", "A+"]])
+#print value 60-69 directly
+print(grades.iloc[2])
+print(grades["C"])
+# * operation on series
+print(grades*3)
